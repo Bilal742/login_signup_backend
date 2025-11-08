@@ -62,7 +62,7 @@ Login-signup-backend/
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/login-signup-toggle-app.git
+   git clone https://github.com/Bilal742/login-signup-vercel-deployment.git
 2. **Install Dependencies:**
    ```bash
    npm install
