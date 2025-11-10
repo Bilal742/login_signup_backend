@@ -32,34 +32,48 @@ This project provides a solid authentication system with proper validations, pas
 ---
 
 ## 📂 Project Structure
+
 ```
- vite-project/
+Login-signup-backend/
 │
-├── 📂 public/
-│ ├── bg.png
-│ └── vite.svg
+├── config/
+│   └── db.js                # MongoDB connection setup
 │
-├── 📂 src/
-│ ├── 📂 assets/
-│ │ └── react.svg
-│ │
-│ ├── 📂 Components/
-│ │ ├── 📂 Login/
-│ │ │ ├── Login.jsx
-│ │ │ └── Login.css
-│ │ │
-│ │ ├── 📂 Signup/
-│ │ │ ├── Signup.jsx
-│ │ │ └── Signup.css
-│ │
-│ ├── App.jsx
-│ └── main.jsx
+├── controllers/
+│   ├── loginController.js   # Handles login logic
+│   └── signupController.js  # Handles signup logic
+│
+├── models/
+│   └── userModel.js         # Mongoose schema for User
+│
+├── routes/
+│   └── userRoutes.js        # API routes for login & signup
 │
 ├── .gitignore
-├── eslint.config.js
-├── index.html
 ├── package.json
-├── package-lock.json
-├── vite.config.js
-└── README.md
+├── server.js                # Entry point of the backend server
+├── README.md
+└── .env                     # (Not uploaded to GitHub) contains secrets like MONGO_URI
 ```
+
+---
+
+## ⚙️ Setup Instructions
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/Bilal742/login-signup-vercel-deployment.git
+2. **Install Dependencies:**
+   ```bash
+   npm install
+3. **Run Locally:**
+   ```bash
+   npm run dev
+---
+
+## 👨‍💻 Developer
+
+**Muhammad Bilal**  
+📧 [bilalusman1291@gmail.com](mailto:bilalusman1291@gmail.com)  
+🌐 [Portfolio](https://imuhammadbilal.vercel.app/)  
+🐙 [GitHub](https://github.com/Bilal742)
