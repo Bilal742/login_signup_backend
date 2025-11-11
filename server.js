@@ -1,21 +1,20 @@
 import express from "express";
-import cors from "cors";
-import router from "./routes/userRoutes.js";
-import connectDB from "./config/db.js";
 import dotenv from "dotenv";
+import cors from "cors";
+import connectDB from "./config/db.js"
+import router from "./routes/userRoutes.js";
 
 dotenv.config();
 
 const app = express();
 
-// middleware
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 
-// DB
-connectDB();
+// Connect DB
+await connectDB();
 
-// Routes
 app.use("/", router);
 
+// Vercel ke liye port listen nahi hota
 export default app;
