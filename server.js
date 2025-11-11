@@ -16,7 +16,7 @@ app.use(cors());
 connectDB();
 
 // ✅ Routes
-app.use("/api", router);
+app.use("/", router);
 
 // ✅ Test Route
 app.get("/", (req, res) => {
@@ -29,4 +29,3 @@ app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
 });
 
-export default app;
