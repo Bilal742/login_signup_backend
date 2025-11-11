@@ -1,31 +1,32 @@
 import express from "express";
-import connectDB from "./config/db.js";
 import dotenv from "dotenv";
 import cors from "cors";
+import connectDB from "./config/db.js";
 import router from "./routes/userRoutes.js";
 
 dotenv.config();
 
 const app = express();
 
-// Middleware
+// Middlewares
 app.use(express.json());
 app.use(cors());
 
-// MongoDB Connection
+// ✅ Connect MongoDB
 connectDB();
 
+// ✅ Routes
+app.use("/api", router);
 
-// Routes
-app.use("/", router);
-
-// Test route
+// ✅ Test Route
 app.get("/", (req, res) => {
-  res.send("Server is running...");
+  res.send("✅ Server is running...");
 });
 
-// Port Setup
+// ✅ Listen (ONLY FOR RAILWAY / RENDER)
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () =>
-  console.log(`Server running on http://localhost:${PORT}`)
-);
+app.listen(PORT, () => {
+  console.log(`✅ Server running on http://localhost:${PORT}`);
+});
+
+export default app;
