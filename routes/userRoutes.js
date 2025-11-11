@@ -6,8 +6,8 @@ import signupUser from "../controllers/signupController.js";
 
 const router = express.Router();
 
-router.post("/signup", signupUser);
-router.post("/login", loginUser);
+router.post("/api/signup", signupUser);
+router.post("/api/login", loginUser);
 
 
 export default router;
